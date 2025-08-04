@@ -1,0 +1,32 @@
+def add(a,b):
+    print("result:",a + b)
+
+def sub(a,b):
+    print("result:",a - b)
+
+
+def multiply(a,b):
+    print("result:",a * b)
+
+
+def division(a,b):
+    print("result:",a / b)
+
+
+def main():
+    a = int(input("enter first number: "))
+    b = int(input("enter second number: "))
+    print("operation","1.add(+)","2.subtraction(-)","3.multiplication(*)","4.division(/)",sep="\n")
+    operation = input("enter operation to perform: ")
+
+    if(operation == '+'):
+        add(a,b)
+    if(operation == '-'):
+        sub(a,b)    
+    if(operation == '*'):
+        multiply(a,b)
+    if(operation == '/'):
+        division(a,b)    
+
+if __name__ == "__main__":
+    main()       
