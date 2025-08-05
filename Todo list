@@ -1,0 +1,36 @@
+def add(task,list):
+    list.append(task)
+    with open("input.txt","a") as f:
+        f.write(task + "\n")
+
+def remove(task,list):
+    list.remove(task)
+
+def view(list):
+    for x in list:
+        print(x)
+
+def main():
+    list = []
+    while (True):
+        print("what to do ?","1.add task","2.remove task","3.view all task","4.exit",sep = "\n")
+        choice = int(input("enter choice: "))
+        if choice == 1 :
+            task = input("enter task :")
+            add(task,list)
+        elif choice == 2 :
+            task = input("enter task to remove:")
+            remove(task,list)
+        elif choice == 3 :
+            view(list)        
+        elif choice == 4:
+            exit()
+        else:
+            print("invalid input")    
+
+
+if __name__ == "__main__":
+    main()   
+
+
+       
